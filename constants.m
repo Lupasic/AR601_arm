@@ -1,15 +1,18 @@
 %% Ideal Data
-robot.bodyHeight = 0.185;
+% robot.bodyHeight = 0.185;
+robot.bodyHeight = 0.5;
 robot.bodyEx = 0.300;
 robot.bodyIn = 0.100;
 
 % robot.armAngle = deg2rad(10);
 robot.armAngle = 0;
-robot.shoulderLength = 0.197;
+% robot.shoulderLength = 0.197;
+robot.shoulderLength = 0.6;
 robot.shoulderEx = 0.100;
 robot.shoulderIn = 0.0900;
 
-robot.elbowHeight = 0.233;
+% robot.elbowHeight = 0.233;
+robot.elbowHeight = 0.8;
 robot.elbowEx = 0.100;
 robot.elbowIn = 0.0900;
 

@@ -1,23 +1,21 @@
 clear;
 constants;
 
-ang = deg2rad([5 0 60]');
+ang = deg2rad([-105 150 135]');
 
-% for bl = [1 2 3; 4 5 6; 7 8 3]'
-%     disp(bl)
-% end
+[~, pos, ~] = FK3links(ang,"L",robot);
 
-[X, pos, eulAngle] = FK3links(ang,"L",robot);
+fullMatOld = pos;
 
-fullMatOld = [pos;eulAngle];
+newAngles = num_ik(fullMatOld,"L",robot);
 
-newAng = num_ik(fullMatOld,"L",robot);
-
-newAng = mod(newAng,2*pi)
-
-rad2deg(newAng)
-
-[X, pos, eulAngle] = FK3links(newAng,"L",robot);
+rad2deg(newAngles)
 
 fullMatOld
-fullMatNew = [pos;eulAngle]
+for curAngles=newAngles
+%     rad2deg(curAngles)
+    [~, pos, ~] = FK3links(curAngles,"L",robot);
+fullMatNew = roundn(pos - fullMatOld,-3)
+% fullMatNew(3:6) = rad2deg(fullMatNew(3:6));
+% fullMatNew
+end
