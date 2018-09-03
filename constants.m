@@ -17,6 +17,7 @@ robot.elbowEx = 0.100;
 robot.elbowIn = 0.0900;
 
 robot.wristLength = 0.378;
+% robot.wristLength = 0;
 robot.wristEx = 0.100;
 robot.wristIn = 0.0900;
 

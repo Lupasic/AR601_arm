@@ -16,7 +16,7 @@ robot.wristLength = sym('L4','real');
 %% Both arms
 syms Xe Ye Ze real;
 
-[T123 temp1 temp2] = FK3links(angles,"L",robot);
+[T123 ~ ~] = FK3links(angles,"L",robot);
 T123 = simplify(T123);
 eqn_sys = T123(1:3,4);
 eqn_sys(1) = eqn_sys(1) == Xe;

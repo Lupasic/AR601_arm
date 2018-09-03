@@ -1,8 +1,6 @@
 function [allAngles] = IK3links(X, arm, robot)
-%NUM_IK Summary of this function goes here
-%   Detailed explanation goes here
 
-angles = zeros(3,1);
+
 if arm == "R"
     b = -1;
 elseif arm == "L"
