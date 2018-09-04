@@ -21,6 +21,9 @@ robot.wristLength = 0.378;
 robot.wristEx = 0.100;
 robot.wristIn = 0.0900;
 
+robot.limitsL = deg2rad([-45 45; 0 90; -90 20; -45 45; -90 5; -90 90]);
+robot.limitsR = deg2rad([-45 45; 0 90; -20 90; -45 45;  -5 90; -90 90]);
+
 robot.Kactuator = [1e6;1e6;1e6;1e6;1e6;1e6];
 
 robot.Ealum = 7E10;

@@ -16,7 +16,7 @@ end
 validateattributes(angles,{'double','sym'},{'size',[3,1]});
 validateattributes(arm,{'string','char'},{'size',[1,1]});
 validateattributes(robot,{'struct'},{});
-%%
+
 AllSymb = syms;
 
 

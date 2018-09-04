@@ -15,7 +15,7 @@ end
 validateattributes(angles,{'double','sym'},{'size',[6,1]});
 validateattributes(arm,{'string','char'},{'size',[1,1]});
 validateattributes(robot,{'struct'},{});
-%%
+
 AllSymb = syms;
 
 if isempty(AllSymb)
@@ -30,7 +30,7 @@ if isempty(AllSymb)
 else
     syms b real;
 end
-
+%%
 T123 = rotH([0;0;angles(1)]) * transH([0;0;robot.bodyHeight]) *...
     rotH([0;0;-b*robot.armAngle])* transH([0;b*robot.shoulderLength;0]) *...
     rotH([0;angles(2);0]) * rotH([angles(3);0;0]) * transH([0;b*robot.elbowHeight;0]);
